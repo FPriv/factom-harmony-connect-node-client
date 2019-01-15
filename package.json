@@ -2,7 +2,7 @@
     "name": "harmony-connect-client",
     "version": "1.0.0",
     "description": "NodeJS client for harmony-connect-client",
-    "repository": "FactomProject/node_client",
+    "repository": "FactomProject/factom-harmony-connect-node-client",
     "main": "api.js",
     "types": "api.d.ts",
     "scripts": {

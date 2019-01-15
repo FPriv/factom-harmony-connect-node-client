@@ -19,7 +19,7 @@ import { EntryCreate } from '../model/entryCreate';
 import { EntryList } from '../model/entryList';
 import { EntrySearchResponse } from '../model/entrySearchResponse';
 import { EntryShort } from '../model/entryShort';
-import { ExternalIds } from '../model/externalIds';
+import { SearchBody } from '../model/searchBody';
 
 import { ObjectSerializer, Authentication, HttpBasicAuth, ApiKeyAuth, OAuth, VoidAuth } from '../model/models';
 
@@ -332,11 +332,11 @@ export class EntriesApi {
      * Find all of the entries within the specified chain that have the requested `external_ids`.
      * @summary Search Chain's Entries
      * @param chainId Chain identifier
-     * @param externalIds 
+     * @param searchBody 
      * @param limit The number of items you would like back in each page.
      * @param offset The page you would like to request. The first page offset is Zero.
      */
-    public postEntriesSearch (chainId: string, externalIds: ExternalIds, limit?: number, offset?: number) : Promise<{ response: http.IncomingMessage; body: EntrySearchResponse;  }> {
+    public postEntriesSearch (chainId: string, searchBody: SearchBody, limit?: number, offset?: number) : Promise<{ response: http.IncomingMessage; body: EntrySearchResponse;  }> {
         const localVarPath = this.basePath + '/chains/{chain_id}/entries/search'
             .replace('{' + 'chain_id' + '}', encodeURIComponent(String(chainId)));
         let localVarQueryParameters: any = {};
@@ -348,9 +348,9 @@ export class EntriesApi {
             throw new Error('Required parameter chainId was null or undefined when calling postEntriesSearch.');
         }
 
-        // verify required parameter 'externalIds' is not null or undefined
-        if (externalIds === null || externalIds === undefined) {
-            throw new Error('Required parameter externalIds was null or undefined when calling postEntriesSearch.');
+        // verify required parameter 'searchBody' is not null or undefined
+        if (searchBody === null || searchBody === undefined) {
+            throw new Error('Required parameter searchBody was null or undefined when calling postEntriesSearch.');
         }
 
         if (limit !== undefined) {
@@ -371,7 +371,7 @@ export class EntriesApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(externalIds, "ExternalIds")
+            body: ObjectSerializer.serialize(searchBody, "SearchBody")
         };
 
         this.authentications.AppId.applyToRequest(localVarRequestOptions);

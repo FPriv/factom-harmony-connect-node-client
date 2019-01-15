@@ -14,7 +14,7 @@
 /**
 * The external IDs of the chains or entries you want to retrieve. You must enter these External IDs in Base64 format.
 */
-export class ExternalIds {
+export class SearchBody {
     /**
     * A list of external IDs.
     */
@@ -30,7 +30,7 @@ export class ExternalIds {
         }    ];
 
     static getAttributeTypeMap() {
-        return ExternalIds.attributeTypeMap;
+        return SearchBody.attributeTypeMap;
     }
 }
 

@@ -18,7 +18,7 @@ import { Chain } from '../model/chain';
 import { ChainCreate } from '../model/chainCreate';
 import { ChainList } from '../model/chainList';
 import { ChainShort } from '../model/chainShort';
-import { ExternalIds } from '../model/externalIds';
+import { SearchBody } from '../model/searchBody';
 
 import { ObjectSerializer, Authentication, HttpBasicAuth, ApiKeyAuth, OAuth, VoidAuth } from '../model/models';
 
@@ -259,19 +259,19 @@ export class ChainsApi {
     /**
      * Finds all of the chains with `external_ids` that match what you've entered. External IDs must be sent in Base64 format.
      * @summary Search Chains
-     * @param externalIds 
+     * @param searchBody 
      * @param limit The number of items you would like back in each page.
      * @param offset The page you would like to request. The first page offset is Zero.
      */
-    public postChainSearch (externalIds: ExternalIds, limit?: number, offset?: number) : Promise<{ response: http.IncomingMessage; body: ChainList;  }> {
+    public postChainSearch (searchBody: SearchBody, limit?: number, offset?: number) : Promise<{ response: http.IncomingMessage; body: ChainList;  }> {
         const localVarPath = this.basePath + '/chains/search';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this.defaultHeaders);
         let localVarFormParams: any = {};
 
-        // verify required parameter 'externalIds' is not null or undefined
-        if (externalIds === null || externalIds === undefined) {
-            throw new Error('Required parameter externalIds was null or undefined when calling postChainSearch.');
+        // verify required parameter 'searchBody' is not null or undefined
+        if (searchBody === null || searchBody === undefined) {
+            throw new Error('Required parameter searchBody was null or undefined when calling postChainSearch.');
         }
 
         if (limit !== undefined) {
@@ -292,7 +292,7 @@ export class ChainsApi {
             uri: localVarPath,
             useQuerystring: this._useQuerystring,
             json: true,
-            body: ObjectSerializer.serialize(externalIds, "ExternalIds")
+            body: ObjectSerializer.serialize(searchBody, "SearchBody")
         };
 
         this.authentications.AppId.applyToRequest(localVarRequestOptions);

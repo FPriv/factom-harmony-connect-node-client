@@ -19,7 +19,7 @@ export * from './entryListData';
 export * from './entrySearchResponse';
 export * from './entrySearchResponseData';
 export * from './entryShort';
-export * from './externalIds';
+export * from './searchBody';
 
 import localVarRequest = require('request');
 
@@ -44,7 +44,7 @@ import { EntryListData } from './entryListData';
 import { EntrySearchResponse } from './entrySearchResponse';
 import { EntrySearchResponseData } from './entrySearchResponseData';
 import { EntryShort } from './entryShort';
-import { ExternalIds } from './externalIds';
+import { SearchBody } from './searchBody';
 
 /* tslint:disable:no-unused-variable */
 let primitives = [
@@ -83,7 +83,7 @@ let typeMap: {[index: string]: any} = {
     "EntrySearchResponse": EntrySearchResponse,
     "EntrySearchResponseData": EntrySearchResponseData,
     "EntryShort": EntryShort,
-    "ExternalIds": ExternalIds,
+    "SearchBody": SearchBody,
 }
 
 export class ObjectSerializer {
