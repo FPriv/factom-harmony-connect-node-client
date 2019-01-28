@@ -7,8 +7,6 @@ Connect is the fastest way to add blockchain capabilities to your app without cr
 - API version: 1.0.17
 - Package version: 1.0.0
 - Build package: org.openapitools.codegen.languages.JavascriptClientCodegen
-
-
 For more information, you can view the Connect documentation at [https://docs.harmony.factom.com](https://docs.harmony.factom.com)
 
 ## Installation

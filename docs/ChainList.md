@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **data** | [**[ChainListData]**](ChainListData.md) | An array that contains the chains on this page. | 
-**offset** | **String** | The page offset. (Current page -1) | 
-**limit** | **String** | The maximum number of chains per page. | 
-**count** | **String** | The total number of chains seen. | 
+**offset** | **Number** | The first chain returned from the total set (Starting from 0). | 
+**limit** | **Number** | The number of chains returned. | 
+**count** | **Number** | The total number of chains seen. | 
 
 
