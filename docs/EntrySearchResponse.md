@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **data** | [**[EntrySearchResponseData]**](EntrySearchResponseData.md) | An array of entries that match your search criterion. | 
-**offset** | **String** | The page offset. (Current page -1) | 
-**limit** | **String** | The maximum number of entries per page. | 
-**count** | **String** | The total number of entries seen. | 
+**offset** | **Number** | The first item returned from the total set (Starting from 0). | 
+**limit** | **Number** | The maximum number of entries per page. | 
+**count** | **Number** | The total number of entries seen. | 
 
 
