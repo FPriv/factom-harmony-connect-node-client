@@ -36,7 +36,7 @@
   /**
    * The EntrySearchResponseData model module.
    * @module model/EntrySearchResponseData
-   * @version 1.0.0
+   * @version 1.0.1
    */
 
   /**
@@ -45,13 +45,15 @@
    * @class
    * @param entryHash {String} The SHA256 Hash of this entry.
    * @param externalIds {Array.<String>} Tags that can be used to identify this entry.
+   * @param stage {String} The level of immutability that this entry has reached.
    * @param href {String} An API link to retrieve all information about this entry.
    */
-  var exports = function(entryHash, externalIds, href) {
+  var exports = function(entryHash, externalIds, stage, href) {
     var _this = this;
 
     _this['entry_hash'] = entryHash;
     _this['external_ids'] = externalIds;
+    _this['stage'] = stage;
     _this['href'] = href;
   };
 
@@ -71,6 +73,9 @@
       if (data.hasOwnProperty('external_ids')) {
         obj['external_ids'] = ApiClient.convertToType(data['external_ids'], ['String']);
       }
+      if (data.hasOwnProperty('stage')) {
+        obj['stage'] = ApiClient.convertToType(data['stage'], 'String');
+      }
       if (data.hasOwnProperty('href')) {
         obj['href'] = ApiClient.convertToType(data['href'], 'String');
       }
@@ -88,6 +93,11 @@
    * @member {Array.<String>} external_ids
    */
   exports.prototype['external_ids'] = undefined;
+  /**
+   * The level of immutability that this entry has reached.
+   * @member {String} stage
+   */
+  exports.prototype['stage'] = undefined;
   /**
    * An API link to retrieve all information about this entry.
    * @member {String} href

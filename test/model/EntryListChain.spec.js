@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.HarmonyConnect);
+    factory(root.expect, root.HarmonyConnectClient);
   }
-}(this, function(expect, HarmonyConnect) {
+}(this, function(expect, HarmonyConnectClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new HarmonyConnect.EntryLinkChain();
+    instance = new HarmonyConnectClient.EntryListChain();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,22 +50,22 @@
       object[property] = value;
   }
 
-  describe('EntryLinkChain', function() {
-    it('should create an instance of EntryLinkChain', function() {
-      // uncomment below and update the code to test EntryLinkChain
-      //var instance = new HarmonyConnect.EntryLinkChain();
-      //expect(instance).to.be.a(HarmonyConnect.EntryLinkChain);
+  describe('EntryListChain', function() {
+    it('should create an instance of EntryListChain', function() {
+      // uncomment below and update the code to test EntryListChain
+      //var instance = new HarmonyConnectClient.EntryListChain();
+      //expect(instance).to.be.a(HarmonyConnectClient.EntryListChain);
     });
 
     it('should have the property chainId (base name: "chain_id")', function() {
       // uncomment below and update the code to test the property chainId
-      //var instance = new HarmonyConnect.EntryLinkChain();
+      //var instance = new HarmonyConnectClient.EntryListChain();
       //expect(instance).to.be();
     });
 
     it('should have the property href (base name: "href")', function() {
       // uncomment below and update the code to test the property href
-      //var instance = new HarmonyConnect.EntryLinkChain();
+      //var instance = new HarmonyConnectClient.EntryListChain();
       //expect(instance).to.be();
     });
 

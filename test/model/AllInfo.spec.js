@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.HarmonyConnect);
+    factory(root.expect, root.HarmonyConnectClient);
   }
-}(this, function(expect, HarmonyConnect) {
+}(this, function(expect, HarmonyConnectClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new HarmonyConnect.AllInfo();
+    instance = new HarmonyConnectClient.AllInfo();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('AllInfo', function() {
     it('should create an instance of AllInfo', function() {
       // uncomment below and update the code to test AllInfo
-      //var instance = new HarmonyConnect.AllInfo();
-      //expect(instance).to.be.a(HarmonyConnect.AllInfo);
+      //var instance = new HarmonyConnectClient.AllInfo();
+      //expect(instance).to.be.a(HarmonyConnectClient.AllInfo);
     });
 
     it('should have the property version (base name: "version")', function() {
       // uncomment below and update the code to test the property version
-      //var instance = new HarmonyConnect.AllInfo();
+      //var instance = new HarmonyConnectClient.AllInfo();
       //expect(instance).to.be();
     });
 
     it('should have the property links (base name: "links")', function() {
       // uncomment below and update the code to test the property links
-      //var instance = new HarmonyConnect.AllInfo();
+      //var instance = new HarmonyConnectClient.AllInfo();
       //expect(instance).to.be();
     });
 

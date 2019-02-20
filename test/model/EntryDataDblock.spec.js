@@ -31,7 +31,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new HarmonyConnectClient.SearchBody();
+    instance = new HarmonyConnectClient.EntryDataDblock();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,16 +50,28 @@
       object[property] = value;
   }
 
-  describe('SearchBody', function() {
-    it('should create an instance of SearchBody', function() {
-      // uncomment below and update the code to test SearchBody
-      //var instance = new HarmonyConnectClient.SearchBody();
-      //expect(instance).to.be.a(HarmonyConnectClient.SearchBody);
+  describe('EntryDataDblock', function() {
+    it('should create an instance of EntryDataDblock', function() {
+      // uncomment below and update the code to test EntryDataDblock
+      //var instance = new HarmonyConnectClient.EntryDataDblock();
+      //expect(instance).to.be.a(HarmonyConnectClient.EntryDataDblock);
     });
 
-    it('should have the property externalIds (base name: "external_ids")', function() {
-      // uncomment below and update the code to test the property externalIds
-      //var instance = new HarmonyConnectClient.SearchBody();
+    it('should have the property keymr (base name: "keymr")', function() {
+      // uncomment below and update the code to test the property keymr
+      //var instance = new HarmonyConnectClient.EntryDataDblock();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property height (base name: "height")', function() {
+      // uncomment below and update the code to test the property height
+      //var instance = new HarmonyConnectClient.EntryDataDblock();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property href (base name: "href")', function() {
+      // uncomment below and update the code to test the property href
+      //var instance = new HarmonyConnectClient.EntryDataDblock();
       //expect(instance).to.be();
     });
 

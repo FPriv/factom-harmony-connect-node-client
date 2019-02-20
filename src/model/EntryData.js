@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/EntryDataEblock', 'model/EntryLinkChain'], factory);
+    define(['ApiClient', 'model/EntryDataDblock', 'model/EntryDataEblock', 'model/EntryListChain'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./EntryDataEblock'), require('./EntryLinkChain'));
+    module.exports = factory(require('../ApiClient'), require('./EntryDataDblock'), require('./EntryDataEblock'), require('./EntryListChain'));
   } else {
     // Browser globals (root is window)
     if (!root.HarmonyConnectClient) {
       root.HarmonyConnectClient = {};
     }
-    root.HarmonyConnectClient.EntryData = factory(root.HarmonyConnectClient.ApiClient, root.HarmonyConnectClient.EntryDataEblock, root.HarmonyConnectClient.EntryLinkChain);
+    root.HarmonyConnectClient.EntryData = factory(root.HarmonyConnectClient.ApiClient, root.HarmonyConnectClient.EntryDataDblock, root.HarmonyConnectClient.EntryDataEblock, root.HarmonyConnectClient.EntryListChain);
   }
-}(this, function(ApiClient, EntryDataEblock, EntryLinkChain) {
+}(this, function(ApiClient, EntryDataDblock, EntryDataEblock, EntryListChain) {
   'use strict';
 
 
@@ -36,17 +36,33 @@
   /**
    * The EntryData model module.
    * @module model/EntryData
-   * @version 1.0.0
+   * @version 1.0.1
    */
 
   /**
    * Constructs a new <code>EntryData</code>.
    * @alias module:model/EntryData
    * @class
+   * @param entryHash {String} The SHA256 Hash of this entry.
+   * @param chain {module:model/EntryListChain} 
+   * @param createdAt {String} The time when this entry was created. Sent in [ISO 8601 Format](https://en.wikipedia.org/wiki/ISO_8601). For example: `YYYY-MM-DDThh:mm:ss.ssssssZ`
+   * @param externalIds {Array.<String>} Tags that can be used to identify your entry. You can search for records that contain a particular external_id using Connect. External IDs are returned in Base64.
+   * @param content {String} This is the data that is stored by the entry. Content will be sent in Base64 format.
+   * @param stage {String} The level of immutability that this entry has reached.
+   * @param dblock {module:model/EntryDataDblock} 
+   * @param eblock {module:model/EntryDataEblock} 
    */
-  var exports = function() {
+  var exports = function(entryHash, chain, createdAt, externalIds, content, stage, dblock, eblock) {
     var _this = this;
 
+    _this['entry_hash'] = entryHash;
+    _this['chain'] = chain;
+    _this['created_at'] = createdAt;
+    _this['external_ids'] = externalIds;
+    _this['content'] = content;
+    _this['stage'] = stage;
+    _this['dblock'] = dblock;
+    _this['eblock'] = eblock;
   };
 
   /**
@@ -63,7 +79,7 @@
         obj['entry_hash'] = ApiClient.convertToType(data['entry_hash'], 'String');
       }
       if (data.hasOwnProperty('chain')) {
-        obj['chain'] = EntryLinkChain.constructFromObject(data['chain']);
+        obj['chain'] = EntryListChain.constructFromObject(data['chain']);
       }
       if (data.hasOwnProperty('created_at')) {
         obj['created_at'] = ApiClient.convertToType(data['created_at'], 'String');
@@ -76,6 +92,9 @@
       }
       if (data.hasOwnProperty('stage')) {
         obj['stage'] = ApiClient.convertToType(data['stage'], 'String');
+      }
+      if (data.hasOwnProperty('dblock')) {
+        obj['dblock'] = EntryDataDblock.constructFromObject(data['dblock']);
       }
       if (data.hasOwnProperty('eblock')) {
         obj['eblock'] = EntryDataEblock.constructFromObject(data['eblock']);
@@ -90,11 +109,11 @@
    */
   exports.prototype['entry_hash'] = undefined;
   /**
-   * @member {module:model/EntryLinkChain} chain
+   * @member {module:model/EntryListChain} chain
    */
   exports.prototype['chain'] = undefined;
   /**
-   * The time when this entry was created. Sent in [ISO 8601 Format](https://en.wikipedia.org/wiki/ISO_8601). For example: `YYYY-MM-DDThh:mm:ssZ`
+   * The time when this entry was created. Sent in [ISO 8601 Format](https://en.wikipedia.org/wiki/ISO_8601). For example: `YYYY-MM-DDThh:mm:ss.ssssssZ`
    * @member {String} created_at
    */
   exports.prototype['created_at'] = undefined;
@@ -113,6 +132,10 @@
    * @member {String} stage
    */
   exports.prototype['stage'] = undefined;
+  /**
+   * @member {module:model/EntryDataDblock} dblock
+   */
+  exports.prototype['dblock'] = undefined;
   /**
    * @member {module:model/EntryDataEblock} eblock
    */

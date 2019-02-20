@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.HarmonyConnect);
+    factory(root.expect, root.HarmonyConnectClient);
   }
-}(this, function(expect, HarmonyConnect) {
+}(this, function(expect, HarmonyConnectClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new HarmonyConnect.EntryData();
+    instance = new HarmonyConnectClient.EntryData();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,49 +53,55 @@
   describe('EntryData', function() {
     it('should create an instance of EntryData', function() {
       // uncomment below and update the code to test EntryData
-      //var instance = new HarmonyConnect.EntryData();
-      //expect(instance).to.be.a(HarmonyConnect.EntryData);
+      //var instance = new HarmonyConnectClient.EntryData();
+      //expect(instance).to.be.a(HarmonyConnectClient.EntryData);
     });
 
     it('should have the property entryHash (base name: "entry_hash")', function() {
       // uncomment below and update the code to test the property entryHash
-      //var instance = new HarmonyConnect.EntryData();
+      //var instance = new HarmonyConnectClient.EntryData();
       //expect(instance).to.be();
     });
 
     it('should have the property chain (base name: "chain")', function() {
       // uncomment below and update the code to test the property chain
-      //var instance = new HarmonyConnect.EntryData();
+      //var instance = new HarmonyConnectClient.EntryData();
       //expect(instance).to.be();
     });
 
     it('should have the property createdAt (base name: "created_at")', function() {
       // uncomment below and update the code to test the property createdAt
-      //var instance = new HarmonyConnect.EntryData();
+      //var instance = new HarmonyConnectClient.EntryData();
       //expect(instance).to.be();
     });
 
     it('should have the property externalIds (base name: "external_ids")', function() {
       // uncomment below and update the code to test the property externalIds
-      //var instance = new HarmonyConnect.EntryData();
+      //var instance = new HarmonyConnectClient.EntryData();
       //expect(instance).to.be();
     });
 
     it('should have the property content (base name: "content")', function() {
       // uncomment below and update the code to test the property content
-      //var instance = new HarmonyConnect.EntryData();
+      //var instance = new HarmonyConnectClient.EntryData();
       //expect(instance).to.be();
     });
 
     it('should have the property stage (base name: "stage")', function() {
       // uncomment below and update the code to test the property stage
-      //var instance = new HarmonyConnect.EntryData();
+      //var instance = new HarmonyConnectClient.EntryData();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property dblock (base name: "dblock")', function() {
+      // uncomment below and update the code to test the property dblock
+      //var instance = new HarmonyConnectClient.EntryData();
       //expect(instance).to.be();
     });
 
     it('should have the property eblock (base name: "eblock")', function() {
       // uncomment below and update the code to test the property eblock
-      //var instance = new HarmonyConnect.EntryData();
+      //var instance = new HarmonyConnectClient.EntryData();
       //expect(instance).to.be();
     });
 

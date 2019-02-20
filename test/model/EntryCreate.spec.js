@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.HarmonyConnect);
+    factory(root.expect, root.HarmonyConnectClient);
   }
-}(this, function(expect, HarmonyConnect) {
+}(this, function(expect, HarmonyConnectClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new HarmonyConnect.EntryCreate();
+    instance = new HarmonyConnectClient.EntryCreate();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,31 +53,31 @@
   describe('EntryCreate', function() {
     it('should create an instance of EntryCreate', function() {
       // uncomment below and update the code to test EntryCreate
-      //var instance = new HarmonyConnect.EntryCreate();
-      //expect(instance).to.be.a(HarmonyConnect.EntryCreate);
+      //var instance = new HarmonyConnectClient.EntryCreate();
+      //expect(instance).to.be.a(HarmonyConnectClient.EntryCreate);
     });
 
     it('should have the property externalIds (base name: "external_ids")', function() {
       // uncomment below and update the code to test the property externalIds
-      //var instance = new HarmonyConnect.EntryCreate();
+      //var instance = new HarmonyConnectClient.EntryCreate();
       //expect(instance).to.be();
     });
 
     it('should have the property content (base name: "content")', function() {
       // uncomment below and update the code to test the property content
-      //var instance = new HarmonyConnect.EntryCreate();
+      //var instance = new HarmonyConnectClient.EntryCreate();
       //expect(instance).to.be();
     });
 
     it('should have the property callbackUrl (base name: "callback_url")', function() {
       // uncomment below and update the code to test the property callbackUrl
-      //var instance = new HarmonyConnect.EntryCreate();
+      //var instance = new HarmonyConnectClient.EntryCreate();
       //expect(instance).to.be();
     });
 
     it('should have the property callbackStages (base name: "callback_stages")', function() {
       // uncomment below and update the code to test the property callbackStages
-      //var instance = new HarmonyConnect.EntryCreate();
+      //var instance = new HarmonyConnectClient.EntryCreate();
       //expect(instance).to.be();
     });
 

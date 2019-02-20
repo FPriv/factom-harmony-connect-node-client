@@ -1,3 +1,4 @@
+[![npm version](https://badge.fury.io/js/harmony-connect-client.svg)](https://badge.fury.io/js/harmony-connect-client)
 # Factom Harmony Connect - Node.js Client Library
 
 This is an automatically generated Node.js client library for [Factom Harmony Connect](https://www.factom.com/products/harmony-connect/).
@@ -5,8 +6,9 @@ This is an automatically generated Node.js client library for [Factom Harmony Co
 Connect is the fastest way to add blockchain capabilities to your app without cryptocurrencies, wallets, or network nodes. [Create an account](https://account.factom.com/) to get your free API key for the sandbox environment.
 
 - API version: 1.0.17
-- Package version: 1.0.0
+- Package version: 1.0.1
 - Build package: org.openapitools.codegen.languages.JavascriptClientCodegen
+
 For more information, you can view the Connect documentation at [https://docs.harmony.factom.com](https://docs.harmony.factom.com)
 
 ## Installation
@@ -135,7 +137,7 @@ Class | Method | HTTP request | Description
 *HarmonyConnectClient.EntriesApi* | [**getLastEntry**](docs/EntriesApi.md#getLastEntry) | **GET** /chains/{chain_id}/entries/last | Get Chain&#39;s Last Entry
 *HarmonyConnectClient.EntriesApi* | [**postEntriesSearch**](docs/EntriesApi.md#postEntriesSearch) | **POST** /chains/{chain_id}/entries/search | Search Chain&#39;s Entries
 *HarmonyConnectClient.EntriesApi* | [**postEntryToChainID**](docs/EntriesApi.md#postEntryToChainID) | **POST** /chains/{chain_id}/entries | Create an Entry
-*HarmonyConnectClient.InfoApi* | [**getAllInfo**](docs/InfoApi.md#getAllInfo) | **GET** / | API Info
+*HarmonyConnectClient.InfoApi* | [**getApiInfo**](docs/InfoApi.md#getApiInfo) | **GET** / | API Info
 
 
 ## Documentation for Models
@@ -145,6 +147,8 @@ Class | Method | HTTP request | Description
  - [HarmonyConnectClient.Chain](docs/Chain.md)
  - [HarmonyConnectClient.ChainCreate](docs/ChainCreate.md)
  - [HarmonyConnectClient.ChainData](docs/ChainData.md)
+ - [HarmonyConnectClient.ChainDataDblock](docs/ChainDataDblock.md)
+ - [HarmonyConnectClient.ChainDataEblock](docs/ChainDataEblock.md)
  - [HarmonyConnectClient.ChainDataEntries](docs/ChainDataEntries.md)
  - [HarmonyConnectClient.ChainLink](docs/ChainLink.md)
  - [HarmonyConnectClient.ChainList](docs/ChainList.md)
@@ -153,10 +157,10 @@ Class | Method | HTTP request | Description
  - [HarmonyConnectClient.Entry](docs/Entry.md)
  - [HarmonyConnectClient.EntryCreate](docs/EntryCreate.md)
  - [HarmonyConnectClient.EntryData](docs/EntryData.md)
+ - [HarmonyConnectClient.EntryDataDblock](docs/EntryDataDblock.md)
  - [HarmonyConnectClient.EntryDataEblock](docs/EntryDataEblock.md)
- - [HarmonyConnectClient.EntryLink](docs/EntryLink.md)
- - [HarmonyConnectClient.EntryLinkChain](docs/EntryLinkChain.md)
  - [HarmonyConnectClient.EntryList](docs/EntryList.md)
+ - [HarmonyConnectClient.EntryListChain](docs/EntryListChain.md)
  - [HarmonyConnectClient.EntryListData](docs/EntryListData.md)
  - [HarmonyConnectClient.EntrySearchResponse](docs/EntrySearchResponse.md)
  - [HarmonyConnectClient.EntrySearchResponseData](docs/EntrySearchResponseData.md)

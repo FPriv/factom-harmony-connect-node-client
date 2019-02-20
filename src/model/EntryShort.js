@@ -36,7 +36,7 @@
   /**
    * The EntryShort model module.
    * @module model/EntryShort
-   * @version 1.0.0
+   * @version 1.0.1
    */
 
   /**
@@ -75,7 +75,7 @@
    */
   exports.prototype['entry_hash'] = undefined;
   /**
-   * The current immutability stage of the new entry. Only returned if callbacks are enabled.
+   * The current immutability stage of the new entry.
    * @member {String} stage
    */
   exports.prototype['stage'] = undefined;
