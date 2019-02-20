@@ -17,12 +17,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AllInfo', 'model/AllInfoLinks', 'model/Chain', 'model/ChainCreate', 'model/ChainData', 'model/ChainDataEntries', 'model/ChainLink', 'model/ChainList', 'model/ChainListData', 'model/ChainShort', 'model/Entry', 'model/EntryCreate', 'model/EntryData', 'model/EntryDataEblock', 'model/EntryLink', 'model/EntryLinkChain', 'model/EntryList', 'model/EntryListData', 'model/EntrySearchResponse', 'model/EntrySearchResponseData', 'model/EntryShort', 'model/SearchBody', 'api/ChainsApi', 'api/EntriesApi', 'api/InfoApi'], factory);
+    define(['ApiClient', 'model/AllInfo', 'model/AllInfoLinks', 'model/Chain', 'model/ChainCreate', 'model/ChainData', 'model/ChainDataDblock', 'model/ChainDataEblock', 'model/ChainDataEntries', 'model/ChainLink', 'model/ChainList', 'model/ChainListData', 'model/ChainShort', 'model/Entry', 'model/EntryCreate', 'model/EntryData', 'model/EntryDataDblock', 'model/EntryDataEblock', 'model/EntryList', 'model/EntryListChain', 'model/EntryListData', 'model/EntrySearchResponse', 'model/EntrySearchResponseData', 'model/EntryShort', 'model/SearchBody', 'api/ChainsApi', 'api/EntriesApi', 'api/InfoApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/AllInfo'), require('./model/AllInfoLinks'), require('./model/Chain'), require('./model/ChainCreate'), require('./model/ChainData'), require('./model/ChainDataEntries'), require('./model/ChainLink'), require('./model/ChainList'), require('./model/ChainListData'), require('./model/ChainShort'), require('./model/Entry'), require('./model/EntryCreate'), require('./model/EntryData'), require('./model/EntryDataEblock'), require('./model/EntryLink'), require('./model/EntryLinkChain'), require('./model/EntryList'), require('./model/EntryListData'), require('./model/EntrySearchResponse'), require('./model/EntrySearchResponseData'), require('./model/EntryShort'), require('./model/SearchBody'), require('./api/ChainsApi'), require('./api/EntriesApi'), require('./api/InfoApi'));
+    module.exports = factory(require('./ApiClient'), require('./model/AllInfo'), require('./model/AllInfoLinks'), require('./model/Chain'), require('./model/ChainCreate'), require('./model/ChainData'), require('./model/ChainDataDblock'), require('./model/ChainDataEblock'), require('./model/ChainDataEntries'), require('./model/ChainLink'), require('./model/ChainList'), require('./model/ChainListData'), require('./model/ChainShort'), require('./model/Entry'), require('./model/EntryCreate'), require('./model/EntryData'), require('./model/EntryDataDblock'), require('./model/EntryDataEblock'), require('./model/EntryList'), require('./model/EntryListChain'), require('./model/EntryListData'), require('./model/EntrySearchResponse'), require('./model/EntrySearchResponseData'), require('./model/EntryShort'), require('./model/SearchBody'), require('./api/ChainsApi'), require('./api/EntriesApi'), require('./api/InfoApi'));
   }
-}(function(ApiClient, AllInfo, AllInfoLinks, Chain, ChainCreate, ChainData, ChainDataEntries, ChainLink, ChainList, ChainListData, ChainShort, Entry, EntryCreate, EntryData, EntryDataEblock, EntryLink, EntryLinkChain, EntryList, EntryListData, EntrySearchResponse, EntrySearchResponseData, EntryShort, SearchBody, ChainsApi, EntriesApi, InfoApi) {
+}(function(ApiClient, AllInfo, AllInfoLinks, Chain, ChainCreate, ChainData, ChainDataDblock, ChainDataEblock, ChainDataEntries, ChainLink, ChainList, ChainListData, ChainShort, Entry, EntryCreate, EntryData, EntryDataDblock, EntryDataEblock, EntryList, EntryListChain, EntryListData, EntrySearchResponse, EntrySearchResponseData, EntryShort, SearchBody, ChainsApi, EntriesApi, InfoApi) {
   'use strict';
 
   /**
@@ -54,7 +54,7 @@
    * </pre>
    * </p>
    * @module index
-   * @version 1.0.0
+   * @version 1.0.1
    */
   var exports = {
     /**
@@ -87,6 +87,16 @@
      * @property {module:model/ChainData}
      */
     ChainData: ChainData,
+    /**
+     * The ChainDataDblock model constructor.
+     * @property {module:model/ChainDataDblock}
+     */
+    ChainDataDblock: ChainDataDblock,
+    /**
+     * The ChainDataEblock model constructor.
+     * @property {module:model/ChainDataEblock}
+     */
+    ChainDataEblock: ChainDataEblock,
     /**
      * The ChainDataEntries model constructor.
      * @property {module:model/ChainDataEntries}
@@ -128,25 +138,25 @@
      */
     EntryData: EntryData,
     /**
+     * The EntryDataDblock model constructor.
+     * @property {module:model/EntryDataDblock}
+     */
+    EntryDataDblock: EntryDataDblock,
+    /**
      * The EntryDataEblock model constructor.
      * @property {module:model/EntryDataEblock}
      */
     EntryDataEblock: EntryDataEblock,
     /**
-     * The EntryLink model constructor.
-     * @property {module:model/EntryLink}
-     */
-    EntryLink: EntryLink,
-    /**
-     * The EntryLinkChain model constructor.
-     * @property {module:model/EntryLinkChain}
-     */
-    EntryLinkChain: EntryLinkChain,
-    /**
      * The EntryList model constructor.
      * @property {module:model/EntryList}
      */
     EntryList: EntryList,
+    /**
+     * The EntryListChain model constructor.
+     * @property {module:model/EntryListChain}
+     */
+    EntryListChain: EntryListChain,
     /**
      * The EntryListData model constructor.
      * @property {module:model/EntryListData}

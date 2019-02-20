@@ -4,12 +4,12 @@ All URIs are relative to *https://connect-shared-sandbox-2445582615332.productio
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getAllInfo**](InfoApi.md#getAllInfo) | **GET** / | API Info
+[**getApiInfo**](InfoApi.md#getApiInfo) | **GET** / | API Info
 
 
-<a name="getAllInfo"></a>
-# **getAllInfo**
-> AllInfo getAllInfo()
+<a name="getApiInfo"></a>
+# **getApiInfo**
+> AllInfo getApiInfo()
 
 API Info
 
@@ -38,7 +38,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getAllInfo(callback);
+apiInstance.getApiInfo(callback);
 ```
 
 ### Parameters

@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.HarmonyConnect);
+    factory(root.expect, root.HarmonyConnectClient);
   }
-}(this, function(expect, HarmonyConnect) {
+}(this, function(expect, HarmonyConnectClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new HarmonyConnect.EntryList();
+    instance = new HarmonyConnectClient.EntryList();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,31 +53,31 @@
   describe('EntryList', function() {
     it('should create an instance of EntryList', function() {
       // uncomment below and update the code to test EntryList
-      //var instance = new HarmonyConnect.EntryList();
-      //expect(instance).to.be.a(HarmonyConnect.EntryList);
+      //var instance = new HarmonyConnectClient.EntryList();
+      //expect(instance).to.be.a(HarmonyConnectClient.EntryList);
     });
 
     it('should have the property data (base name: "data")', function() {
       // uncomment below and update the code to test the property data
-      //var instance = new HarmonyConnect.EntryList();
+      //var instance = new HarmonyConnectClient.EntryList();
       //expect(instance).to.be();
     });
 
     it('should have the property offset (base name: "offset")', function() {
       // uncomment below and update the code to test the property offset
-      //var instance = new HarmonyConnect.EntryList();
+      //var instance = new HarmonyConnectClient.EntryList();
       //expect(instance).to.be();
     });
 
     it('should have the property limit (base name: "limit")', function() {
       // uncomment below and update the code to test the property limit
-      //var instance = new HarmonyConnect.EntryList();
+      //var instance = new HarmonyConnectClient.EntryList();
       //expect(instance).to.be();
     });
 
     it('should have the property count (base name: "count")', function() {
       // uncomment below and update the code to test the property count
-      //var instance = new HarmonyConnect.EntryList();
+      //var instance = new HarmonyConnectClient.EntryList();
       //expect(instance).to.be();
     });
 

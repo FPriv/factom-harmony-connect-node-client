@@ -17,18 +17,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/EntryLinkChain'], factory);
+    define(['ApiClient', 'model/EntryListChain'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./EntryLinkChain'));
+    module.exports = factory(require('../ApiClient'), require('./EntryListChain'));
   } else {
     // Browser globals (root is window)
     if (!root.HarmonyConnectClient) {
       root.HarmonyConnectClient = {};
     }
-    root.HarmonyConnectClient.EntryListData = factory(root.HarmonyConnectClient.ApiClient, root.HarmonyConnectClient.EntryLinkChain);
+    root.HarmonyConnectClient.EntryListData = factory(root.HarmonyConnectClient.ApiClient, root.HarmonyConnectClient.EntryListChain);
   }
-}(this, function(ApiClient, EntryLinkChain) {
+}(this, function(ApiClient, EntryListChain) {
   'use strict';
 
 
@@ -36,7 +36,7 @@
   /**
    * The EntryListData model module.
    * @module model/EntryListData
-   * @version 1.0.0
+   * @version 1.0.1
    */
 
   /**
@@ -44,8 +44,8 @@
    * @alias module:model/EntryListData
    * @class
    * @param entryHash {String} The SHA256 Hash of this entry.
-   * @param chain {module:model/EntryLinkChain} 
-   * @param createdAt {String} The time at which this entry was created. Sent in [ISO 8601 Format](https://en.wikipedia.org/wiki/ISO_8601). For example: `YYYY-MM-DDThh:mm:ssZ`
+   * @param chain {module:model/EntryListChain} 
+   * @param createdAt {String} The time at which this entry was created. Sent in [ISO 8601 Format](https://en.wikipedia.org/wiki/ISO_8601). For example: `YYYY-MM-DDThh:mm:ss.ssssssZ`
    * @param href {String} An API link to retrieve all information about this entry.
    */
   var exports = function(entryHash, chain, createdAt, href) {
@@ -71,7 +71,7 @@
         obj['entry_hash'] = ApiClient.convertToType(data['entry_hash'], 'String');
       }
       if (data.hasOwnProperty('chain')) {
-        obj['chain'] = EntryLinkChain.constructFromObject(data['chain']);
+        obj['chain'] = EntryListChain.constructFromObject(data['chain']);
       }
       if (data.hasOwnProperty('created_at')) {
         obj['created_at'] = ApiClient.convertToType(data['created_at'], 'String');
@@ -89,11 +89,11 @@
    */
   exports.prototype['entry_hash'] = undefined;
   /**
-   * @member {module:model/EntryLinkChain} chain
+   * @member {module:model/EntryListChain} chain
    */
   exports.prototype['chain'] = undefined;
   /**
-   * The time at which this entry was created. Sent in [ISO 8601 Format](https://en.wikipedia.org/wiki/ISO_8601). For example: `YYYY-MM-DDThh:mm:ssZ`
+   * The time at which this entry was created. Sent in [ISO 8601 Format](https://en.wikipedia.org/wiki/ISO_8601). For example: `YYYY-MM-DDThh:mm:ss.ssssssZ`
    * @member {String} created_at
    */
   exports.prototype['created_at'] = undefined;

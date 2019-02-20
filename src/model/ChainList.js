@@ -36,7 +36,7 @@
   /**
    * The ChainList model module.
    * @module model/ChainList
-   * @version 1.0.0
+   * @version 1.0.1
    */
 
   /**
@@ -45,9 +45,9 @@
    * @alias module:model/ChainList
    * @class
    * @param data {Array.<module:model/ChainListData>} An array that contains the chains on this page.
-   * @param offset {String} The page offset. (Current page -1)
-   * @param limit {String} The maximum number of chains per page.
-   * @param count {String} The total number of chains seen.
+   * @param offset {Number} The index of the first chain returned from the total set (Starting from 0).
+   * @param limit {Number} The number of chains returned.
+   * @param count {Number} The total number of chains seen.
    */
   var exports = function(data, offset, limit, count) {
     var _this = this;
@@ -72,13 +72,13 @@
         obj['data'] = ApiClient.convertToType(data['data'], [ChainListData]);
       }
       if (data.hasOwnProperty('offset')) {
-        obj['offset'] = ApiClient.convertToType(data['offset'], 'String');
+        obj['offset'] = ApiClient.convertToType(data['offset'], 'Number');
       }
       if (data.hasOwnProperty('limit')) {
-        obj['limit'] = ApiClient.convertToType(data['limit'], 'String');
+        obj['limit'] = ApiClient.convertToType(data['limit'], 'Number');
       }
       if (data.hasOwnProperty('count')) {
-        obj['count'] = ApiClient.convertToType(data['count'], 'String');
+        obj['count'] = ApiClient.convertToType(data['count'], 'Number');
       }
     }
     return obj;
@@ -90,18 +90,18 @@
    */
   exports.prototype['data'] = undefined;
   /**
-   * The page offset. (Current page -1)
-   * @member {String} offset
+   * The index of the first chain returned from the total set (Starting from 0).
+   * @member {Number} offset
    */
   exports.prototype['offset'] = undefined;
   /**
-   * The maximum number of chains per page.
-   * @member {String} limit
+   * The number of chains returned.
+   * @member {Number} limit
    */
   exports.prototype['limit'] = undefined;
   /**
    * The total number of chains seen.
-   * @member {String} count
+   * @member {Number} count
    */
   exports.prototype['count'] = undefined;
 

@@ -36,7 +36,7 @@
   /**
    * The ChainListData model module.
    * @module model/ChainListData
-   * @version 1.0.0
+   * @version 1.0.1
    */
 
   /**
@@ -46,13 +46,17 @@
    * @param chainId {String} The ID for this chain on the Factom blockchain.
    * @param externalIds {Array.<String>} The external IDs attached to this chain on the Factom blockchain.
    * @param href {String} An API link to retrieve all information about this chain.
+   * @param stage {String} The level of immutability that this chain has reached.
+   * @param createdAt {String} The time at which this chain was created. Sent in [ISO 8601 Format](https://en.wikipedia.org/wiki/ISO_8601). For example: `YYYY-MM-DDThh:mm:ss.ssssssZ` This will be null if the chain is not at least at the `factom` immutability stage.
    */
-  var exports = function(chainId, externalIds, href) {
+  var exports = function(chainId, externalIds, href, stage, createdAt) {
     var _this = this;
 
     _this['chain_id'] = chainId;
     _this['external_ids'] = externalIds;
     _this['href'] = href;
+    _this['stage'] = stage;
+    _this['created_at'] = createdAt;
   };
 
   /**
@@ -74,6 +78,12 @@
       if (data.hasOwnProperty('href')) {
         obj['href'] = ApiClient.convertToType(data['href'], 'String');
       }
+      if (data.hasOwnProperty('stage')) {
+        obj['stage'] = ApiClient.convertToType(data['stage'], 'String');
+      }
+      if (data.hasOwnProperty('created_at')) {
+        obj['created_at'] = ApiClient.convertToType(data['created_at'], 'String');
+      }
     }
     return obj;
   }
@@ -93,6 +103,16 @@
    * @member {String} href
    */
   exports.prototype['href'] = undefined;
+  /**
+   * The level of immutability that this chain has reached.
+   * @member {String} stage
+   */
+  exports.prototype['stage'] = undefined;
+  /**
+   * The time at which this chain was created. Sent in [ISO 8601 Format](https://en.wikipedia.org/wiki/ISO_8601). For example: `YYYY-MM-DDThh:mm:ss.ssssssZ` This will be null if the chain is not at least at the `factom` immutability stage.
+   * @member {String} created_at
+   */
+  exports.prototype['created_at'] = undefined;
 
 
 

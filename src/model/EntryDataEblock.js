@@ -36,11 +36,12 @@
   /**
    * The EntryDataEblock model module.
    * @module model/EntryDataEblock
-   * @version 1.0.0
+   * @version 1.0.1
    */
 
   /**
    * Constructs a new <code>EntryDataEblock</code>.
+   * Represents the Entry Block that contains the entry. This will be null if the entry is not at least at the &#x60;factom&#x60; immutability stage.
    * @alias module:model/EntryDataEblock
    * @class
    */

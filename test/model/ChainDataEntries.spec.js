@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.HarmonyConnect);
+    factory(root.expect, root.HarmonyConnectClient);
   }
-}(this, function(expect, HarmonyConnect) {
+}(this, function(expect, HarmonyConnectClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new HarmonyConnect.ChainDataEntries();
+    instance = new HarmonyConnectClient.ChainDataEntries();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,13 +53,13 @@
   describe('ChainDataEntries', function() {
     it('should create an instance of ChainDataEntries', function() {
       // uncomment below and update the code to test ChainDataEntries
-      //var instance = new HarmonyConnect.ChainDataEntries();
-      //expect(instance).to.be.a(HarmonyConnect.ChainDataEntries);
+      //var instance = new HarmonyConnectClient.ChainDataEntries();
+      //expect(instance).to.be.a(HarmonyConnectClient.ChainDataEntries);
     });
 
     it('should have the property href (base name: "href")', function() {
       // uncomment below and update the code to test the property href
-      //var instance = new HarmonyConnect.ChainDataEntries();
+      //var instance = new HarmonyConnectClient.ChainDataEntries();
       //expect(instance).to.be();
     });
 

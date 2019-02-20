@@ -34,7 +34,7 @@
   /**
    * Info service.
    * @module api/InfoApi
-   * @version 1.0.0
+   * @version 1.0.1
    */
 
   /**
@@ -49,8 +49,8 @@
 
 
     /**
-     * Callback function to receive the result of the getAllInfo operation.
-     * @callback module:api/InfoApi~getAllInfoCallback
+     * Callback function to receive the result of the getApiInfo operation.
+     * @callback module:api/InfoApi~getApiInfoCallback
      * @param {String} error Error message, if any.
      * @param {module:model/AllInfo} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
@@ -59,10 +59,10 @@
     /**
      * API Info
      * Request general information about the Connect API such as the version and available endpoints.
-     * @param {module:api/InfoApi~getAllInfoCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/InfoApi~getApiInfoCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/AllInfo}
      */
-    this.getAllInfo = function(callback) {
+    this.getApiInfo = function(callback) {
       var postBody = null;
 
 

@@ -26,7 +26,7 @@
     if (!root.HarmonyConnectClient) {
       root.HarmonyConnectClient = {};
     }
-    root.HarmonyConnectClient.ChainShort = factory(root.HarmonyConnectClient.ApiClient);
+    root.HarmonyConnectClient.EntryListChain = factory(root.HarmonyConnectClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,34 +34,28 @@
 
 
   /**
-   * The ChainShort model module.
-   * @module model/ChainShort
+   * The EntryListChain model module.
+   * @module model/EntryListChain
    * @version 1.0.1
    */
 
   /**
-   * Constructs a new <code>ChainShort</code>.
-   * Represents a list of Factom chains that have been or will be saved to the blockchain.
-   * @alias module:model/ChainShort
+   * Constructs a new <code>EntryListChain</code>.
+   * An object that contains the Chain Hash (ID) as well as a URL for the chain.
+   * @alias module:model/EntryListChain
    * @class
-   * @param chainId {String} This is the unique identifier created for each chain.
-   * @param entryHash {String} The SHA256 Hash of the chain's first entry.
-   * @param stage {String} The immutability stage that this chain has reached.
    */
-  var exports = function(chainId, entryHash, stage) {
+  var exports = function() {
     var _this = this;
 
-    _this['chain_id'] = chainId;
-    _this['entry_hash'] = entryHash;
-    _this['stage'] = stage;
   };
 
   /**
-   * Constructs a <code>ChainShort</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>EntryListChain</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ChainShort} obj Optional instance to populate.
-   * @return {module:model/ChainShort} The populated <code>ChainShort</code> instance.
+   * @param {module:model/EntryListChain} obj Optional instance to populate.
+   * @return {module:model/EntryListChain} The populated <code>EntryListChain</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
@@ -69,31 +63,23 @@
       if (data.hasOwnProperty('chain_id')) {
         obj['chain_id'] = ApiClient.convertToType(data['chain_id'], 'String');
       }
-      if (data.hasOwnProperty('entry_hash')) {
-        obj['entry_hash'] = ApiClient.convertToType(data['entry_hash'], 'String');
-      }
-      if (data.hasOwnProperty('stage')) {
-        obj['stage'] = ApiClient.convertToType(data['stage'], 'String');
+      if (data.hasOwnProperty('href')) {
+        obj['href'] = ApiClient.convertToType(data['href'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * This is the unique identifier created for each chain.
+   * The ID for this chain on the Factom blockchain.
    * @member {String} chain_id
    */
   exports.prototype['chain_id'] = undefined;
   /**
-   * The SHA256 Hash of the chain's first entry.
-   * @member {String} entry_hash
+   * An API link to retrieve all information about this chain.
+   * @member {String} href
    */
-  exports.prototype['entry_hash'] = undefined;
-  /**
-   * The immutability stage that this chain has reached.
-   * @member {String} stage
-   */
-  exports.prototype['stage'] = undefined;
+  exports.prototype['href'] = undefined;
 
 
 

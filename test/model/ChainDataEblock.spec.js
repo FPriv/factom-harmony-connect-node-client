@@ -31,7 +31,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new HarmonyConnectClient.SearchBody();
+    instance = new HarmonyConnectClient.ChainDataEblock();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,16 +50,22 @@
       object[property] = value;
   }
 
-  describe('SearchBody', function() {
-    it('should create an instance of SearchBody', function() {
-      // uncomment below and update the code to test SearchBody
-      //var instance = new HarmonyConnectClient.SearchBody();
-      //expect(instance).to.be.a(HarmonyConnectClient.SearchBody);
+  describe('ChainDataEblock', function() {
+    it('should create an instance of ChainDataEblock', function() {
+      // uncomment below and update the code to test ChainDataEblock
+      //var instance = new HarmonyConnectClient.ChainDataEblock();
+      //expect(instance).to.be.a(HarmonyConnectClient.ChainDataEblock);
     });
 
-    it('should have the property externalIds (base name: "external_ids")', function() {
-      // uncomment below and update the code to test the property externalIds
-      //var instance = new HarmonyConnectClient.SearchBody();
+    it('should have the property keymr (base name: "keymr")', function() {
+      // uncomment below and update the code to test the property keymr
+      //var instance = new HarmonyConnectClient.ChainDataEblock();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property href (base name: "href")', function() {
+      // uncomment below and update the code to test the property href
+      //var instance = new HarmonyConnectClient.ChainDataEblock();
       //expect(instance).to.be();
     });
 

@@ -26,7 +26,7 @@
     if (!root.HarmonyConnectClient) {
       root.HarmonyConnectClient = {};
     }
-    root.HarmonyConnectClient.EntryLinkChain = factory(root.HarmonyConnectClient.ApiClient);
+    root.HarmonyConnectClient.ChainDataEblock = factory(root.HarmonyConnectClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,15 +34,15 @@
 
 
   /**
-   * The EntryLinkChain model module.
-   * @module model/EntryLinkChain
-   * @version 1.0.0
+   * The ChainDataEblock model module.
+   * @module model/ChainDataEblock
+   * @version 1.0.1
    */
 
   /**
-   * Constructs a new <code>EntryLinkChain</code>.
-   * An object that contains the Chain Hash (ID) as well as a URL for the chain.
-   * @alias module:model/EntryLinkChain
+   * Constructs a new <code>ChainDataEblock</code>.
+   * Represents the Entry Block that contains the first entry of this chain. This will be null if the chain is not at least at the &#x60;factom&#x60; immutability stage.
+   * @alias module:model/ChainDataEblock
    * @class
    */
   var exports = function() {
@@ -51,17 +51,17 @@
   };
 
   /**
-   * Constructs a <code>EntryLinkChain</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ChainDataEblock</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/EntryLinkChain} obj Optional instance to populate.
-   * @return {module:model/EntryLinkChain} The populated <code>EntryLinkChain</code> instance.
+   * @param {module:model/ChainDataEblock} obj Optional instance to populate.
+   * @return {module:model/ChainDataEblock} The populated <code>ChainDataEblock</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
-      if (data.hasOwnProperty('chain_id')) {
-        obj['chain_id'] = ApiClient.convertToType(data['chain_id'], 'String');
+      if (data.hasOwnProperty('keymr')) {
+        obj['keymr'] = ApiClient.convertToType(data['keymr'], 'String');
       }
       if (data.hasOwnProperty('href')) {
         obj['href'] = ApiClient.convertToType(data['href'], 'String');
@@ -71,12 +71,12 @@
   }
 
   /**
-   * The ID for this chain on the Factom blockchain.
-   * @member {String} chain_id
+   * The Key Merkle Root for this entry block.
+   * @member {String} keymr
    */
-  exports.prototype['chain_id'] = undefined;
+  exports.prototype['keymr'] = undefined;
   /**
-   * An API link to retrieve all information about this chain.
+   * An API link to retrieve all information about this entry block.
    * @member {String} href
    */
   exports.prototype['href'] = undefined;

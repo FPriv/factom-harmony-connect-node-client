@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.HarmonyConnect);
+    factory(root.expect, root.HarmonyConnectClient);
   }
-}(this, function(expect, HarmonyConnect) {
+}(this, function(expect, HarmonyConnectClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new HarmonyConnect.InfoApi();
+    instance = new HarmonyConnectClient.InfoApi();
   });
 
   var getProperty = function(object, getter, property) {
@@ -51,10 +51,10 @@
   }
 
   describe('InfoApi', function() {
-    describe('getAllInfo', function() {
-      it('should call getAllInfo successfully', function(done) {
-        //uncomment below and update the code to test getAllInfo
-        //instance.getAllInfo(function(error) {
+    describe('getApiInfo', function() {
+      it('should call getApiInfo successfully', function(done) {
+        //uncomment below and update the code to test getApiInfo
+        //instance.getApiInfo(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.HarmonyConnect);
+    factory(root.expect, root.HarmonyConnectClient);
   }
-}(this, function(expect, HarmonyConnect) {
+}(this, function(expect, HarmonyConnectClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new HarmonyConnect.EntryLink();
+    instance = new HarmonyConnectClient.ChainDataDblock();
   });
 
   var getProperty = function(object, getter, property) {
@@ -50,34 +50,28 @@
       object[property] = value;
   }
 
-  describe('EntryLink', function() {
-    it('should create an instance of EntryLink', function() {
-      // uncomment below and update the code to test EntryLink
-      //var instance = new HarmonyConnect.EntryLink();
-      //expect(instance).to.be.a(HarmonyConnect.EntryLink);
+  describe('ChainDataDblock', function() {
+    it('should create an instance of ChainDataDblock', function() {
+      // uncomment below and update the code to test ChainDataDblock
+      //var instance = new HarmonyConnectClient.ChainDataDblock();
+      //expect(instance).to.be.a(HarmonyConnectClient.ChainDataDblock);
     });
 
-    it('should have the property entryHash (base name: "entry_hash")', function() {
-      // uncomment below and update the code to test the property entryHash
-      //var instance = new HarmonyConnect.EntryLink();
+    it('should have the property keymr (base name: "keymr")', function() {
+      // uncomment below and update the code to test the property keymr
+      //var instance = new HarmonyConnectClient.ChainDataDblock();
       //expect(instance).to.be();
     });
 
-    it('should have the property chain (base name: "chain")', function() {
-      // uncomment below and update the code to test the property chain
-      //var instance = new HarmonyConnect.EntryLink();
-      //expect(instance).to.be();
-    });
-
-    it('should have the property createdAt (base name: "created_at")', function() {
-      // uncomment below and update the code to test the property createdAt
-      //var instance = new HarmonyConnect.EntryLink();
+    it('should have the property height (base name: "height")', function() {
+      // uncomment below and update the code to test the property height
+      //var instance = new HarmonyConnectClient.ChainDataDblock();
       //expect(instance).to.be();
     });
 
     it('should have the property href (base name: "href")', function() {
       // uncomment below and update the code to test the property href
-      //var instance = new HarmonyConnect.EntryLink();
+      //var instance = new HarmonyConnectClient.ChainDataDblock();
       //expect(instance).to.be();
     });
 

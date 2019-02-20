@@ -26,7 +26,7 @@
     if (!root.HarmonyConnectClient) {
       root.HarmonyConnectClient = {};
     }
-    root.HarmonyConnectClient.ChainDataEntries = factory(root.HarmonyConnectClient.ApiClient);
+    root.HarmonyConnectClient.ChainDataDblock = factory(root.HarmonyConnectClient.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -34,33 +34,38 @@
 
 
   /**
-   * The ChainDataEntries model module.
-   * @module model/ChainDataEntries
+   * The ChainDataDblock model module.
+   * @module model/ChainDataDblock
    * @version 1.0.1
    */
 
   /**
-   * Constructs a new <code>ChainDataEntries</code>.
-   * @alias module:model/ChainDataEntries
+   * Constructs a new <code>ChainDataDblock</code>.
+   * Represents the Directory Block that relates to this chain. This will be null if the chain is not at least at the &#x60;factom&#x60; immutability stage.
+   * @alias module:model/ChainDataDblock
    * @class
-   * @param href {String} An API link to all of the entries in this chain.
    */
-  var exports = function(href) {
+  var exports = function() {
     var _this = this;
 
-    _this['href'] = href;
   };
 
   /**
-   * Constructs a <code>ChainDataEntries</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>ChainDataDblock</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/ChainDataEntries} obj Optional instance to populate.
-   * @return {module:model/ChainDataEntries} The populated <code>ChainDataEntries</code> instance.
+   * @param {module:model/ChainDataDblock} obj Optional instance to populate.
+   * @return {module:model/ChainDataDblock} The populated <code>ChainDataDblock</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
+      if (data.hasOwnProperty('keymr')) {
+        obj['keymr'] = ApiClient.convertToType(data['keymr'], 'String');
+      }
+      if (data.hasOwnProperty('height')) {
+        obj['height'] = ApiClient.convertToType(data['height'], 'Number');
+      }
       if (data.hasOwnProperty('href')) {
         obj['href'] = ApiClient.convertToType(data['href'], 'String');
       }
@@ -69,7 +74,17 @@
   }
 
   /**
-   * An API link to all of the entries in this chain.
+   * The Key Merkle Root for this directory block.
+   * @member {String} keymr
+   */
+  exports.prototype['keymr'] = undefined;
+  /**
+   * The Factom blockchain height of this directory block.
+   * @member {Number} height
+   */
+  exports.prototype['height'] = undefined;
+  /**
+   * An API link to retrieve all information about this directory block.
    * @member {String} href
    */
   exports.prototype['href'] = undefined;

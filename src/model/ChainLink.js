@@ -36,7 +36,7 @@
   /**
    * The ChainLink model module.
    * @module model/ChainLink
-   * @version 1.0.0
+   * @version 1.0.1
    */
 
   /**

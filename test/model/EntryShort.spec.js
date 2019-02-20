@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.HarmonyConnect);
+    factory(root.expect, root.HarmonyConnectClient);
   }
-}(this, function(expect, HarmonyConnect) {
+}(this, function(expect, HarmonyConnectClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new HarmonyConnect.EntryShort();
+    instance = new HarmonyConnectClient.EntryShort();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('EntryShort', function() {
     it('should create an instance of EntryShort', function() {
       // uncomment below and update the code to test EntryShort
-      //var instance = new HarmonyConnect.EntryShort();
-      //expect(instance).to.be.a(HarmonyConnect.EntryShort);
+      //var instance = new HarmonyConnectClient.EntryShort();
+      //expect(instance).to.be.a(HarmonyConnectClient.EntryShort);
     });
 
     it('should have the property entryHash (base name: "entry_hash")', function() {
       // uncomment below and update the code to test the property entryHash
-      //var instance = new HarmonyConnect.EntryShort();
+      //var instance = new HarmonyConnectClient.EntryShort();
       //expect(instance).to.be();
     });
 
     it('should have the property stage (base name: "stage")', function() {
       // uncomment below and update the code to test the property stage
-      //var instance = new HarmonyConnect.EntryShort();
+      //var instance = new HarmonyConnectClient.EntryShort();
       //expect(instance).to.be();
     });
 

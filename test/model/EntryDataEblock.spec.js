@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.HarmonyConnect);
+    factory(root.expect, root.HarmonyConnectClient);
   }
-}(this, function(expect, HarmonyConnect) {
+}(this, function(expect, HarmonyConnectClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new HarmonyConnect.EntryDataEblock();
+    instance = new HarmonyConnectClient.EntryDataEblock();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,19 +53,19 @@
   describe('EntryDataEblock', function() {
     it('should create an instance of EntryDataEblock', function() {
       // uncomment below and update the code to test EntryDataEblock
-      //var instance = new HarmonyConnect.EntryDataEblock();
-      //expect(instance).to.be.a(HarmonyConnect.EntryDataEblock);
+      //var instance = new HarmonyConnectClient.EntryDataEblock();
+      //expect(instance).to.be.a(HarmonyConnectClient.EntryDataEblock);
     });
 
     it('should have the property keymr (base name: "keymr")', function() {
       // uncomment below and update the code to test the property keymr
-      //var instance = new HarmonyConnect.EntryDataEblock();
+      //var instance = new HarmonyConnectClient.EntryDataEblock();
       //expect(instance).to.be();
     });
 
     it('should have the property href (base name: "href")', function() {
       // uncomment below and update the code to test the property href
-      //var instance = new HarmonyConnect.EntryDataEblock();
+      //var instance = new HarmonyConnectClient.EntryDataEblock();
       //expect(instance).to.be();
     });
 

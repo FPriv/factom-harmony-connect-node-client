@@ -1,4 +1,4 @@
-# HarmonyConnectClient.EntryLinkChain
+# HarmonyConnectClient.EntryListChain
 
 ## Properties
 Name | Type | Description | Notes

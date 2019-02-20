@@ -23,15 +23,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.HarmonyConnect);
+    factory(root.expect, root.HarmonyConnectClient);
   }
-}(this, function(expect, HarmonyConnect) {
+}(this, function(expect, HarmonyConnectClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new HarmonyConnect.EntryListData();
+    instance = new HarmonyConnectClient.EntryListData();
   });
 
   var getProperty = function(object, getter, property) {
@@ -53,31 +53,31 @@
   describe('EntryListData', function() {
     it('should create an instance of EntryListData', function() {
       // uncomment below and update the code to test EntryListData
-      //var instance = new HarmonyConnect.EntryListData();
-      //expect(instance).to.be.a(HarmonyConnect.EntryListData);
+      //var instance = new HarmonyConnectClient.EntryListData();
+      //expect(instance).to.be.a(HarmonyConnectClient.EntryListData);
     });
 
     it('should have the property entryHash (base name: "entry_hash")', function() {
       // uncomment below and update the code to test the property entryHash
-      //var instance = new HarmonyConnect.EntryListData();
+      //var instance = new HarmonyConnectClient.EntryListData();
       //expect(instance).to.be();
     });
 
     it('should have the property chain (base name: "chain")', function() {
       // uncomment below and update the code to test the property chain
-      //var instance = new HarmonyConnect.EntryListData();
+      //var instance = new HarmonyConnectClient.EntryListData();
       //expect(instance).to.be();
     });
 
     it('should have the property createdAt (base name: "created_at")', function() {
       // uncomment below and update the code to test the property createdAt
-      //var instance = new HarmonyConnect.EntryListData();
+      //var instance = new HarmonyConnectClient.EntryListData();
       //expect(instance).to.be();
     });
 
     it('should have the property href (base name: "href")', function() {
       // uncomment below and update the code to test the property href
-      //var instance = new HarmonyConnect.EntryListData();
+      //var instance = new HarmonyConnectClient.EntryListData();
       //expect(instance).to.be();
     });
 
