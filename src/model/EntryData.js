@@ -36,7 +36,7 @@
   /**
    * The EntryData model module.
    * @module model/EntryData
-   * @version 1.0.1
+   * @version 1.0.7
    */
 
   /**
@@ -45,24 +45,18 @@
    * @class
    * @param entryHash {String} The SHA256 Hash of this entry.
    * @param chain {module:model/EntryListChain} 
-   * @param createdAt {String} The time when this entry was created. Sent in [ISO 8601 Format](https://en.wikipedia.org/wiki/ISO_8601). For example: `YYYY-MM-DDThh:mm:ss.ssssssZ`
    * @param externalIds {Array.<String>} Tags that can be used to identify your entry. You can search for records that contain a particular external_id using Connect. External IDs are returned in Base64.
    * @param content {String} This is the data that is stored by the entry. Content will be sent in Base64 format.
    * @param stage {String} The level of immutability that this entry has reached.
-   * @param dblock {module:model/EntryDataDblock} 
-   * @param eblock {module:model/EntryDataEblock} 
    */
-  var exports = function(entryHash, chain, createdAt, externalIds, content, stage, dblock, eblock) {
+  var exports = function(entryHash, chain, externalIds, content, stage) {
     var _this = this;
 
     _this['entry_hash'] = entryHash;
     _this['chain'] = chain;
-    _this['created_at'] = createdAt;
     _this['external_ids'] = externalIds;
     _this['content'] = content;
     _this['stage'] = stage;
-    _this['dblock'] = dblock;
-    _this['eblock'] = eblock;
   };
 
   /**

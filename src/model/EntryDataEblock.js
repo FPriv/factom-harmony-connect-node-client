@@ -36,7 +36,7 @@
   /**
    * The EntryDataEblock model module.
    * @module model/EntryDataEblock
-   * @version 1.0.1
+   * @version 1.0.7
    */
 
   /**

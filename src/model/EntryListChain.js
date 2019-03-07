@@ -36,7 +36,7 @@
   /**
    * The EntryListChain model module.
    * @module model/EntryListChain
-   * @version 1.0.1
+   * @version 1.0.7
    */
 
   /**

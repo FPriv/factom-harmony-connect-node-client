@@ -36,7 +36,7 @@
   /**
    * The ChainList model module.
    * @module model/ChainList
-   * @version 1.0.1
+   * @version 1.0.7
    */
 
   /**

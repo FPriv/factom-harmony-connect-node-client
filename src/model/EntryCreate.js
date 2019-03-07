@@ -36,7 +36,7 @@
   /**
    * The EntryCreate model module.
    * @module model/EntryCreate
-   * @version 1.0.1
+   * @version 1.0.7
    */
 
   /**

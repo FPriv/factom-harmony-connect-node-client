@@ -36,7 +36,7 @@
   /**
    * The EntryShort model module.
    * @module model/EntryShort
-   * @version 1.0.1
+   * @version 1.0.7
    */
 
   /**

@@ -36,7 +36,7 @@
   /**
    * The EntryList model module.
    * @module model/EntryList
-   * @version 1.0.1
+   * @version 1.0.7
    */
 
   /**

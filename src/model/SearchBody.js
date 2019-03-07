@@ -36,7 +36,7 @@
   /**
    * The SearchBody model module.
    * @module model/SearchBody
-   * @version 1.0.1
+   * @version 1.0.7
    */
 
   /**

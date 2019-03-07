@@ -36,7 +36,7 @@
   /**
    * The ChainListData model module.
    * @module model/ChainListData
-   * @version 1.0.1
+   * @version 1.0.7
    */
 
   /**
@@ -47,16 +47,14 @@
    * @param externalIds {Array.<String>} The external IDs attached to this chain on the Factom blockchain.
    * @param href {String} An API link to retrieve all information about this chain.
    * @param stage {String} The level of immutability that this chain has reached.
-   * @param createdAt {String} The time at which this chain was created. Sent in [ISO 8601 Format](https://en.wikipedia.org/wiki/ISO_8601). For example: `YYYY-MM-DDThh:mm:ss.ssssssZ` This will be null if the chain is not at least at the `factom` immutability stage.
    */
-  var exports = function(chainId, externalIds, href, stage, createdAt) {
+  var exports = function(chainId, externalIds, href, stage) {
     var _this = this;
 
     _this['chain_id'] = chainId;
     _this['external_ids'] = externalIds;
     _this['href'] = href;
     _this['stage'] = stage;
-    _this['created_at'] = createdAt;
   };
 
   /**

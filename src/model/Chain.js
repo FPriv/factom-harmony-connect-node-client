@@ -36,7 +36,7 @@
   /**
    * The Chain model module.
    * @module model/Chain
-   * @version 1.0.1
+   * @version 1.0.7
    */
 
   /**

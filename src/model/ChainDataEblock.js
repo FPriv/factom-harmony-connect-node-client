@@ -36,7 +36,7 @@
   /**
    * The ChainDataEblock model module.
    * @module model/ChainDataEblock
-   * @version 1.0.1
+   * @version 1.0.7
    */
 
   /**

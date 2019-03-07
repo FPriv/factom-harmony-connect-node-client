@@ -36,7 +36,7 @@
   /**
    * The ChainCreate model module.
    * @module model/ChainCreate
-   * @version 1.0.1
+   * @version 1.0.7
    */
 
   /**
