@@ -36,7 +36,7 @@
   /**
    * The EntrySearchResponse model module.
    * @module model/EntrySearchResponse
-   * @version 1.0.1
+   * @version 1.0.7
    */
 
   /**

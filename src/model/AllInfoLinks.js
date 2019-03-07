@@ -36,7 +36,7 @@
   /**
    * The AllInfoLinks model module.
    * @module model/AllInfoLinks
-   * @version 1.0.1
+   * @version 1.0.7
    */
 
   /**

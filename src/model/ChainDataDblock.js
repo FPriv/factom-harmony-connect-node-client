@@ -36,7 +36,7 @@
   /**
    * The ChainDataDblock model module.
    * @module model/ChainDataDblock
-   * @version 1.0.1
+   * @version 1.0.7
    */
 
   /**

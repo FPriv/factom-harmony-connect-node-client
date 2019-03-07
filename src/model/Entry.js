@@ -36,7 +36,7 @@
   /**
    * The Entry model module.
    * @module model/Entry
-   * @version 1.0.1
+   * @version 1.0.7
    */
 
   /**

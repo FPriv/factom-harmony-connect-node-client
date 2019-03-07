@@ -36,7 +36,7 @@
   /**
    * The EntrySearchResponseData model module.
    * @module model/EntrySearchResponseData
-   * @version 1.0.1
+   * @version 1.0.7
    */
 
   /**

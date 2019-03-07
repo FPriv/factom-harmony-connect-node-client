@@ -6,7 +6,7 @@ This is an automatically generated Node.js client library for [Factom Harmony Co
 Connect is the fastest way to add blockchain capabilities to your app without cryptocurrencies, wallets, or network nodes. [Create an account](https://account.factom.com/) to get your free API key for the sandbox environment.
 
 - API version: 1.0.17
-- Package version: 1.0.1
+- Package version: 1.0.7
 - Build package: org.openapitools.codegen.languages.JavascriptClientCodegen
 
 For more information, you can view the Connect documentation at [https://docs.harmony.factom.com](https://docs.harmony.factom.com)

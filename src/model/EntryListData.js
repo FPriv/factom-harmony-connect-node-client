@@ -36,7 +36,7 @@
   /**
    * The EntryListData model module.
    * @module model/EntryListData
-   * @version 1.0.1
+   * @version 1.0.7
    */
 
   /**
@@ -45,15 +45,13 @@
    * @class
    * @param entryHash {String} The SHA256 Hash of this entry.
    * @param chain {module:model/EntryListChain} 
-   * @param createdAt {String} The time at which this entry was created. Sent in [ISO 8601 Format](https://en.wikipedia.org/wiki/ISO_8601). For example: `YYYY-MM-DDThh:mm:ss.ssssssZ`
    * @param href {String} An API link to retrieve all information about this entry.
    */
-  var exports = function(entryHash, chain, createdAt, href) {
+  var exports = function(entryHash, chain, href) {
     var _this = this;
 
     _this['entry_hash'] = entryHash;
     _this['chain'] = chain;
-    _this['created_at'] = createdAt;
     _this['href'] = href;
   };
 
