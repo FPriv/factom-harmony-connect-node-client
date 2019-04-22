@@ -1,6 +1,6 @@
 {
   "name": "harmony-connect-client",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "This is an automatically generated Node.js client library for Factom Harmony Connect.",
   "license": "MIT",
   "main": "src/index.js",

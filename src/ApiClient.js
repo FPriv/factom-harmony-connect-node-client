@@ -49,7 +49,7 @@
      * @type {String}
      * @default https://connect-shared-sandbox-2445582615332.production.gw.apicast.io/v1
      */
-    this.basePath = 'https://connect-shared-sandbox-2445582615332.production.gw.apicast.io/v1'.replace(/\/+$/, '');
+    this.basePath = 'https://ephemeral.api.factom.com/v1'.replace(/\/+$/, '');
 
     /**
      * The authentication methods to be included for all API calls.
